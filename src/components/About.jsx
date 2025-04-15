@@ -8,6 +8,7 @@ import AnimatedTitle from "./AnimatedTitle";
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () =>{
+
     useGSAP (() =>{
         const clipAnimation = gsap.timeline({
             scrollTrigger: {
@@ -26,6 +27,7 @@ const About = () =>{
             borderRadius: 0,
         })
     })
+
     return (
         <div id='about' className='min-h-screen w-screen'>
             <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
