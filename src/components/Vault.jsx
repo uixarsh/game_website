@@ -80,7 +80,7 @@ const BentoImgCard = ({src, title, description, isComingSoon}) => {
     )
 }
 
-const Features = () => {
+const Vault = () => {
     return (
         <section id="vault" className="bg-black pb-52">
             <div className="container mx-auto px-3 md:px-10">
@@ -160,4 +160,4 @@ const Features = () => {
     )
 }
 
-export default Features;
+export default Vault;
