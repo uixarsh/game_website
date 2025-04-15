@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 
-const navItems = ['Home', 'Vault', 'Prologue', 'About', 'Contact']
+const navItems = ['Home', 'About', 'Vault', 'Prologue', 'Contact']
 
 const Navbar = () => {
     

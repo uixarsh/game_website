@@ -49,7 +49,7 @@ const BentoVidCard = ({src, title, description, isComingSoon}) => {
                 autoPlay
                 className="absolute left-0 top-0 size-full object-cover object-center"
             />
-            <div className="relative z-10 flex size-ful flex-col justify-between p-5 text-blue-50">
+            <div className="relative z-10 flex size-ful flex-col justify-between p-5 text-blue-50 uppercase robert-regular">
                 <div>
                     <h1 className="bento-title special-font">{title}</h1>
                     {description && (
@@ -68,7 +68,7 @@ const BentoImgCard = ({src, title, description, isComingSoon}) => {
                 src = {src}
                 className="absolute left-0 top-0 size-full object-cover object-center"
             />
-            <div className="relative z-10 flex size-ful flex-col justify-between p-5 text-blue-50">
+            <div className="relative z-10 flex size-ful flex-col justify-between p-5 text-blue-50 uppercase robert-regular">
                 <div>
                     <h1 className="bento-title special-font">{title}</h1>
                     {description && (
@@ -85,20 +85,20 @@ const Features = () => {
         <section id="vault" className="bg-black pb-52">
             <div className="container mx-auto px-3 md:px-10">
                 <div className="px-1 py-24">
-                <p className="font-circular-web text-lg text-blue-50">
-                    Into the Metagame Layer
+                <p className="font-circular-web text-xl text-blue-50 uppercase mb-2">
+                    Step Into Metagame Infinity
                 </p>
 
-                <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-                    Immerse yourself in a rich and ever-expanding universe where a vibrant array of products converge into an interconnected overlay experience on your world.
+                <p className="max-w-md font-general text-md text-blue-50 opacity-50">
+                    Immerse yourself in a boundless, ever-evolving universe where diverse digital realms and assets merge into a seamless overlay on your world.
                 </p>
                 </div>
 
                 <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
                     <BentoVidCard 
                         src = "videos/feature-1.mp4"
-                        title = {<>radia<b>n</b>t</>}
-                        description = "A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+                        title = {<><b>a</b>zure</>}
+                        description = "A living city of light and motion, Azure blends infinite realms into a single, ever-shifting metagame experience."
                         isComingSoon
                     />
                 </BentoTilt>
@@ -107,8 +107,8 @@ const Features = () => {
                     <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
                         <BentoImgCard 
                             src="img/feature-2.png"
-                            title={<>zigm<b>a</b></>}
-                            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+                            title={<><b>a</b>sh</>}
+                            description="Forged in pixels and passion—Ash leads the charge in a world ready to grow beyond imagination."
                             isComingSoon
                         />
                     </BentoTilt>
@@ -116,8 +116,8 @@ const Features = () => {
                     <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
                         <BentoImgCard
                             src="img/feature-3.jpg"
-                            title={<>n<b>e</b>xus</>}
-                            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+                            title={<>vel<b>o</b>citron</>}
+                            description=""
                             isComingSoon
                         />
                     </BentoTilt>
@@ -127,9 +127,9 @@ const Features = () => {
                             src="img/feature-4.jpg"
                             title={
                             <>
-                                az<b>u</b>l
+                                sk<b>y</b>ris
                             </>}
-                            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+                            description=""
                             isComingSoon
                         />
                     </BentoTilt>
