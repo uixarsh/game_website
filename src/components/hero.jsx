@@ -43,7 +43,7 @@ const Hero = () => {
 
     return(
         // HERO SECTION
-        <div className="relative h-dvh w-screen overflow-x-hidden">
+        <div id="home" className="relative h-dvh w-screen overflow-x-hidden">
 
             {/* Loading Animation */}
             {isLoading && (
