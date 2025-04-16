@@ -2,6 +2,9 @@ import React from "react";
 import { useState, useRef } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 
+
+// BENTO MODEL IMPLEMENTED
+// Card tilt logic
 const BentoTilt = ({ children, className = "" }) => {
     const [transformStyle, setTransformStyle] = useState("");
     const itemRef = useRef(null);
@@ -39,6 +42,7 @@ const BentoTilt = ({ children, className = "" }) => {
     );
   };
 
+// Bento Video Card
 const BentoVidCard = ({src, title, description, isComingSoon}) => {
     return(
         <div className="relative size-full">
@@ -61,6 +65,7 @@ const BentoVidCard = ({src, title, description, isComingSoon}) => {
     )
 }
 
+// Bento Image Card
 const BentoImgCard = ({src, title, description, isComingSoon}) => {
     return(
         <div className="relative size-full">
@@ -80,20 +85,25 @@ const BentoImgCard = ({src, title, description, isComingSoon}) => {
     )
 }
 
+// Vault
 const Vault = () => {
     return (
         <section id="vault" className="bg-black pb-52">
             <div className="container mx-auto px-3 md:px-10">
-                <div className="px-1 py-24">
-                <p className="font-circular-web text-xl text-blue-50 uppercase mb-2">
-                    Step Into Metagame Infinity
-                </p>
 
-                <p className="max-w-md font-general text-md text-blue-50 opacity-50">
-                    Immerse yourself in a boundless, ever-evolving universe where diverse digital realms and assets merge into a seamless overlay on your world.
-                </p>
+                {/* Layer 1 */}
+                <div className="px-1 py-24">
+                    <p className="font-circular-web text-xl text-blue-50 uppercase mb-2">
+                        Step Into Metagame Infinity
+                    </p>
+
+                    <p className="max-w-md font-general text-md text-blue-50 opacity-50">
+                        Immerse yourself in a boundless, ever-evolving universe where diverse digital realms and assets merge into a seamless overlay on your world.
+                    </p>
                 </div>
 
+                {/* Layer 2 */}
+                {/* Azure Bento Card */}
                 <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
                     <BentoVidCard 
                         src = "videos/feature-1.mp4"
@@ -102,8 +112,11 @@ const Vault = () => {
                         isComingSoon
                     />
                 </BentoTilt>
-
+                
+                {/* Layer 3: Grid Layout (2cols, 3rows) */}
                 <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
+
+                    {/* Ash Bento Card */}
                     <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
                         <BentoImgCard 
                             src="img/feature-2.png"
@@ -113,6 +126,7 @@ const Vault = () => {
                         />
                     </BentoTilt>
 
+                    {/* Velocitron Bento Card */}
                     <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
                         <BentoImgCard
                             src="img/feature-3.jpg"
@@ -122,6 +136,7 @@ const Vault = () => {
                         />
                     </BentoTilt>
 
+                    {/* Skyris Bento Card */}
                     <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
                         <BentoImgCard
                             src="img/feature-4.jpg"
@@ -133,7 +148,8 @@ const Vault = () => {
                             isComingSoon
                         />
                     </BentoTilt>
-
+                    
+                    {/* More coming soon Bento Card */}
                     <BentoTilt className="bento-tilt_2">
                         <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
                             <h1 className="bento-title special-font max-w-64 text-black"> 
@@ -142,7 +158,8 @@ const Vault = () => {
                             <TiLocationArrow className="m-5 scale-[8] self-end" />
                         </div>
                     </BentoTilt>
-
+                    
+                    {/* Video feature Bento Card */}
                     <BentoTilt className="bento-tilt_2">
                         <video
                             src="/videos/feature-5.mp4"

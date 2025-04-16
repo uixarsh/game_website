@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 
+// Navbar Items
 const navItems = ['Home', 'About', 'Vault', 'Prologue', 'Contact']
 
 const Navbar = () => {
@@ -12,8 +13,9 @@ const Navbar = () => {
     const[isNavVisible, setIsNavVisible] = useState(true)
     const navContainerRef = useRef(null);
     const audioElementRef = useRef(null);
-
     const { y: currentScrollY} = useWindowScroll();
+
+    // tracking the scroll and Navbar visibility (does navbar needs to be shown or not upon scroll)
     useEffect(()=>{
         if (currentScrollY === 0){
             setIsNavVisible(true);
@@ -38,6 +40,7 @@ const Navbar = () => {
         })
     }, [isNavVisible])
 
+    // tracking and playing the sound upon button click
     const toggleAudioIndicatior = () => {
         setIsAudioPlaying((prev) => !prev);
         setIsIndicatorActive((prev) => !prev);
@@ -54,12 +57,17 @@ const Navbar = () => {
 
 
     return (
+        // NavBar Wrapper 
         <div ref={navContainerRef} className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6">
             <header className="absolute top-1/2 w-full -translate-y-1/2">
             <nav className="flex size-full items-center justify-between p-4">
+
+                {/*Providing logo */}               
                 <div className="flex items-center gap-7">
                     <img src="/img/logo.png" alt="logo" className="w-10" />
                 </div>
+
+                {/*Adjusting Navbar components by mapping the array elements */}
                 <div className="flex h-full items-center">
                     <div className="hidden md:block">
                         {navItems.map((item => (
@@ -68,6 +76,8 @@ const Navbar = () => {
                             </a>
                         )))}
                     </div>
+
+                    {/*Play the sound animated button */}
                     <button className="ml-10 flex items-center space-x-0.5" onClick={toggleAudioIndicatior}>
                         <audio ref={audioElementRef} className="hidden" src="/audio/loop.mp3" loop />
                             {[1,2,3,4].map((bar) => (

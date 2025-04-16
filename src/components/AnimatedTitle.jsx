@@ -4,9 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Takes args as title and containerClass
 const AnimatedTitle = ({title, containerClass}) => {
-
     const containerRef = useRef(null);
+
+    {/*Animating the Text */}
     useEffect(() => {
         const ctx = gsap.context(() => {
             const titleAnimation = gsap.timeline({
@@ -32,6 +34,7 @@ const AnimatedTitle = ({title, containerClass}) => {
     }, []);
 
     return (
+        // Spliting the args provided and wrapping it around heading font.
         <div 
             ref={containerRef}
             className={`animated-title ${containerClass}`}>

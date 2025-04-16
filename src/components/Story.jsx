@@ -3,6 +3,7 @@ import AnimatedTitle from './AnimatedTitle'
 import gsap from "gsap";
 import Button from "./Button";
 
+// Story Mode
 const Story = () =>{
     const frameRef = useRef('null');
 
