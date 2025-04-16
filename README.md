@@ -1,12 +1,40 @@
-# React + Vite
+# Infinity Nexus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my modern, animated, and responsive website built using **React JS**, **GSAP (GreenSock Animation Platform)**, and **Tailwind CSS**. This project showcases interactive design, smooth animations, and clean UI architecture — perfect for portfolios, landing pages, or creative projects.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **[React JS](https://reactjs.org/):** A declarative, component-based JavaScript library for building user interfaces.
+- **[GSAP](https://greensock.com/gsap/):** High-performance JavaScript animation library used for animations and transitions.
+- **[Tailwind CSS](https://tailwindcss.com/):** Utility-first CSS framework for designing directly in markup.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Getting Started
+
+These instructions will help you set up and run the project on your local machine.
+
+### 🔧 Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later recommended)
+- npm (comes with Node.js) or yarn
+
+---
+
+### 📁 Installation
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
+
+```
+###
+Let me know if you'd like me to customize the , GitHub links, for building Websites. I can tailor it more!
+
+

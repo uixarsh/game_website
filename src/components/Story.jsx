@@ -7,6 +7,7 @@ import Button from "./Button";
 const Story = () =>{
     const frameRef = useRef('null');
 
+    // Set the position to default for image.
     const handleMouseLeave = () => {
         const element = frameRef.current;
         gsap.to(element, 
@@ -19,6 +20,7 @@ const Story = () =>{
         )
     }
     
+    // Logic for handing upon mouse move how the image should react.
     const handleMouseMove = (e) => {
         const {clientX, clientY} = e;
         const element = frameRef.current;
@@ -47,13 +49,21 @@ const Story = () =>{
     return (
         <section id="prologue" className="min-h-dvh w-screen bg-black text-blue-50">
             <div className="flex size-full flex-col items-center py-10 pb-24">
+                
+                {/*Small Text Heading */}
                 <p className="font-general text-sm uppercase md:text-[10px]"> infinite possibilities</p>
+                
+                {/*Story Header */}
                 <div className="relative size-full">
+
+                    {/*Animating Text */}
                     <AnimatedTitle
                         title = "an ep<b>i</b>c st<b>o</b>ry of <br/>dark<b>n</b>ess"
                         sectionId = "#story"
                         containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
                     />
+
+                    {/*Masking the Image and handling over mouse position */}
                     <div className="story-img-container">
                         <div className="story-img-mask">
                             <div className="story-img-content">
@@ -71,6 +81,8 @@ const Story = () =>{
                         </div>
                     </div>
                 </div>
+
+                {/*Adding prologue button to the bottom right */}
                 <div className="-mt-80 flex w-full fustify-center md:-mt-65 md:me-44 md:justify-end">
                     <div className="flex h-full w-fit flex-col items-center md:items-start">
                         <Button 
